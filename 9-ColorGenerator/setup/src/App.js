@@ -13,6 +13,7 @@ function App() {
     try {
       let colors = new Values(color).all(10);
       setList(colors);
+      setError(false);
     } 
     catch(error){
       setError(true);
@@ -23,7 +24,7 @@ function App() {
 
   return <>
   <section className='container'>
-    <h3>color generator</h3>
+    <h3>Color generator</h3>
     <form onSubmit={handleSubmit}>
       <input type='text' 
       value={color} 
